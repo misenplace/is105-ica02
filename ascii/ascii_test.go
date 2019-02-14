@@ -17,7 +17,7 @@ func TestGreetingASCIIIsAscii(t *testing.T) {
 	val := GreetingASCII()
 	for i := 0; i < len(val); i++ {
 		if val[i] > unicode.MaxASCII {
-			t.Errorf("Return value contains non-ascii value: %v", val[i])
+			t.Errorf("Return value contains non-ascii value: %q", val[i])
 		}
 	}
 }
