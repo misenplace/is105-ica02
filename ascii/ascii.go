@@ -36,6 +36,6 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1c
 func GreetingASCII() string {
-	s := []byte{'"', 'H', 'e', 'l', 'l', 'o', ' ', ':', '-', ')', '"', '¥'}
+	s := []byte{'"','H','e','l','l','o',' ',':','-',')','"'}
 	return string(s[:])
 }
