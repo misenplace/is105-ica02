@@ -6,12 +6,14 @@ import (
 	"fmt"
 )
 
+// constant var of the standard ASCII table
 const asciiLiteral = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f" +
 	"\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f" +
 	` !"#$%&'()*+,-./0123456789:;<=>?` +
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
+// constant var of the extended ASCII table
 const asciiExtendedLiteral = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89" +
 	"\x8A\x8B\x8C\x8D\x8E\x8F" +
 	"\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99" +
@@ -31,23 +33,32 @@ const asciiExtendedLiteral = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89" +
 
 func main() {
 
+	// if arguments passed is less than 2, print usage
+	// os.Args counts the actual program name (main_ascii.go) as an argument.
+	// therefore, we have to check if it's more than two.
+	// this check is required to not get an IndexOutOfBoundsException
 	if len(os.Args) < 2 {
 		printUsage()
 	} else {
+		// if second argument is -ex, print extended ascii table
 		if os.Args[1] == "-ex" {
 			printAsciiTable(asciiExtendedLiteral)
+		// if second argument is -st, print standard ascii table
 		} else if os.Args[1] == "-st" {
 			printAsciiTable(asciiLiteral)
+		// if second argument is nothing at all, print usage.
 		} else {
 			printUsage()
 		}
 	}
 }
 
+// make this a function for ease of use.
 func printAsciiTable(stringLiteral string) {
 	ascii.IterateOverASCIIStringLiteral(stringLiteral)
 }
 
+// usage function
 func printUsage() {
 	fmt.Println("usage: main_ascii [-st][-ex]")
 	fmt.Println("-st	prints standard 0 to 127 ascii table")
