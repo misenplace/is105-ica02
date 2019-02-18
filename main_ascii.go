@@ -1,6 +1,10 @@
 package main
 
-import "github.com/anzu/is105-ica02/ascii"
+import (
+	"github.com/anzu/is105-ica02/ascii"
+	"os"
+	"fmt"
+)
 
 const asciiLiteral = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f" +
 	"\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f" +
@@ -26,5 +30,26 @@ const asciiExtendedLiteral = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89" +
 	"\xFA\xFB\xFC\xFD\xFE\xFF"
 
 func main() {
-	ascii.IterateOverASCIIStringLiteral(asciiLiteral)
+
+	if len(os.Args) < 2 {
+		printUsage()
+	} else {
+		if os.Args[1] == "-ex" {
+			printAsciiTable(asciiExtendedLiteral)
+		} else if os.Args[1] == "-st" {
+			printAsciiTable(asciiLiteral)
+		} else {
+			printUsage()
+		}
+	}
+}
+
+func printAsciiTable(stringLiteral string) {
+	ascii.IterateOverASCIIStringLiteral(stringLiteral)
+}
+
+func printUsage() {
+	fmt.Println("usage: main_ascii [-st][-ex]")
+	fmt.Println("-st	prints standard 0 to 127 ascii table")
+	fmt.Println("-ex	prints exnteded ascii table")
 }
