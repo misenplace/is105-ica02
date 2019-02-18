@@ -1,5 +1,9 @@
 # is105-ica02
 
+This is the second group assignment of Group 6.
+
+Primary focus is strings and their various represantations in the Go language.
+
 ## main_ascii.go
 
 How to use: 
