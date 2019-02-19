@@ -32,7 +32,7 @@ func IterateOverASCIIStringLiteral(sl string) {
 	}
 }
 
-func GetExtendedASCIIStringLiteral() string {
+func GetExtendedASCIITable() string {
 	return asciiExtendedLiteral
 }
 
@@ -40,6 +40,7 @@ func GetExtendedASCIIStringLiteral() string {
 // utvidet ASCII
 // Kode for Oppgave 2c
 func GreetingExtendedASCII() string {
-	s := []byte("Salut, ça va °-) Ça coute €50")
+//	s := []byte("Salut, ça va °-) Ça coute €50")
+	s := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
 	return string(s[:])
 }
