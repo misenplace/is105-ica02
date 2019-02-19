@@ -8,13 +8,13 @@ import (
 var expected = "\"Hello :-)\""
 
 func TestGreetingASCII(t *testing.T) {
-	if val := GreetingASCII(); val != expected {
+	if val := greetingASCII(); val != expected {
 		t.Errorf("greetingASCII() returned %s, expected %v", val, expected)
 	}
 }
 
 func TestGreetingASCIIIsAscii(t *testing.T) {
-	val := GreetingASCII()
+	val := greetingASCII()
 	for i := 0; i < len(val); i++ {
 		if val[i] > unicode.MaxASCII {
 			t.Errorf("Return value contains non-ascii value: %q", val[i])

@@ -15,11 +15,12 @@ func main() {
 	if len(os.Args) < 2 {
 		printUsage()
 	} else {
-		// if second argument is -ex, print extended ascii table
-		if os.Args[1] == "-ex" {
-			ascii.IterateOverExtendedASCIIStringLiteral(ascii.GetExtendedASCIIStringLiteral())
-		// if second argument is -st, print standard ascii table
-		} else if os.Args[1] == "-st" {
+//		// if second argument is -ex, print extended ascii table
+//		if os.Args[1] == "-ex" {
+//			ascii.IterateOverExtendedASCIIStringLiteral(ascii.GetExtendedASCIIStringLiteral())
+//		// if second argument is -st, print standard ascii table
+//		} else 
+		if os.Args[1] == "-st" {
 			ascii.IterateOverASCIIStringLiteral(ascii.GetStandardASCIIStringLiteral())
 		// if second argument is nothing at all, print usage.
 		} else {
