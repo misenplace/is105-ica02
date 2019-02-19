@@ -12,13 +12,3 @@ func TestGreetingExtendedASCIIONly(t *testing.T) {
 		}
 	}
 }
-
-// checks if string is writable using standard ASCII and Extended ASCII
-// func TestGreetingExtendedASCII(t *testing.T) {
-// 	val := greetingExtendedASCII()
-// 	for i := 0; i < len(val); i++ {
-// 		if val[i] > unicode.MaxLatin1 {
-// 			t.Errorf("Return value contains non-ascii value: %q", val[i])
-// 		}
-// 	}
-// }
