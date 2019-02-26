@@ -6,16 +6,26 @@ Primary focus is strings and their various represantations in the Go language.
 
 ## main_ascii.go
 
-How to use: 
+Prints out the Standard Ascii table.
 
-`go run main_ascii.go -st` prints out the standard ascii table
-`go run main_ascii.go -ex` prints out the extended ascii table
+## main_fileutils.iso
 
-`go run main_ascii.go *anything else*` prints out usage info.
-Like so:
+Prints out the filecontents of the files in the lang dir.
 
-```
-usage: main_ascii [-st][-ex]
--st	prints standard 0 to 127 ascii table
--ex	prints exnteded ascii table
-```
+## main_iso.go
+
+Prints out the Extended Ascii table.
+
+## main_slice.go
+
+WIP
+
+## main_treasure.go
+
+Print out the string in the "treasure" file. (Fun fact: It's Linus announcing Linux on Usenet in
+1991 with some random Norwegian letters thrown in.)
+
+## main_unicode.go
+
+Super basic "translation" tool. (Currently only translates one string `nord og sør` to icelandic and
+Japanese.
