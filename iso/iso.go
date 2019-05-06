@@ -19,14 +19,7 @@ const asciiExtendedLiteral = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89" +
 	"\xF0\xF1\xF2\xF3\xF4\xF5\xF6\xF7\xF8\xF9" +
 	"\xFA\xFB\xFC\xFD\xFE\xFF"
 
-// Oppgave 2a
-// Lag selv en "string literal" med utvidet ASCII
-// Blir det kun en slik "string literal" eller trenger man flere
-// for å representere utvidet ASCII?
-
-// IterateOverASCIIStringLiteral tar en "string literal" som INN-data
 func IterateOverASCIIStringLiteral(sl string) {
-	// Kode for Oppgave 2a
 	for i := 0; i < len(sl); i++ {
 		fmt.Printf("%X %q %b\n", sl[i], sl[i], sl[i])
 	}
@@ -36,9 +29,6 @@ func GetExtendedASCIITable() string {
 	return asciiExtendedLiteral
 }
 
-// GreetingExtendedASCII returnerer en tekst-streng i 
-// utvidet ASCII
-// Kode for Oppgave 2c
 func GreetingExtendedASCII() string {
 //	s := []byte("Salut, ça va °-) Ça coute €50")
 	s := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
